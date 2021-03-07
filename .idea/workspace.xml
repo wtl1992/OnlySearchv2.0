@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71a621b3-c72c-4a21-9d66-7bbb66443b6f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cert/1_www.ljxwtl.cn_bundle.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cert/2_www.ljxwtl.cn.key" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/metv/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/metv/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +35,8 @@
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="GO_FMT" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
@@ -43,6 +49,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GoProjects\OnlySearchv2.0\cert" />
       <recent name="D:\GoProjects\OnlySearchv2.0\templates\tv" />
       <recent name="D:\GoProjects\OnlySearchv2.0\templates\metv" />
       <recent name="D:\GoProjects\OnlySearchv2.0\static\config\metv" />
@@ -103,6 +110,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="上传增强版" />
+    <option name="LAST_COMMIT_MESSAGE" value="上传增强版" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

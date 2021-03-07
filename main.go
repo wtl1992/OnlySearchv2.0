@@ -12,16 +12,16 @@ func main() {
 	config.GlobalConfig(application)
 
 	dataBase, _ := config.DatabaseConfig()
-	config.MetvConfig(application,dataBase.(*database.MySqlDataBase).Engine,nil)
-	config.PlayConfig(application,dataBase.(*database.MySqlDataBase).Engine,nil)
-	config.TvConfig(application,dataBase.(*database.MySqlDataBase).Engine,nil)
+	config.MetvConfig(application, dataBase.(*database.MySqlDataBase).Engine, nil)
+	config.PlayConfig(application, dataBase.(*database.MySqlDataBase).Engine, nil)
+	config.TvConfig(application, dataBase.(*database.MySqlDataBase).Engine, nil)
 
-	application.HandleDir("/static","./static")
-	application.RegisterView(iris.HTML("./templates",".html").Reload(true))
+	application.HandleDir("/static", "./static")
+	application.RegisterView(iris.HTML("./templates", ".html").Reload(true))
 
-	err := application.Run(iris.Addr(":8080"))
+	err := application.Run(iris.TLS(":8080", "cert/1_www.ljxwtl.cn_bundle.crt", "cert/2_www.ljxwtl.cn.key"))
 
-	if err != nil{
+	if err != nil {
 		panic(err.Error())
 	}
 }

@@ -164,6 +164,7 @@ $(function () {
             varietyKindLis.removeClass("focus");
             $(this).addClass("focus");
             commonAjax();
+            pageIndex = 0;
         });
 
         let varietyAreaLis = $("ul.variety-area li");
@@ -172,6 +173,7 @@ $(function () {
             varietyAreaLis.removeClass("focus");
             $(this).addClass("focus");
             commonAjax();
+            pageIndex = 0;
         });
 
         let varietySortLis = $("ul.variety-sort li");
@@ -180,6 +182,7 @@ $(function () {
             varietySortLis.removeClass("focus");
             $(this).addClass("focus");
             commonAjax();
+            pageIndex = 0;
         });
     });
 
@@ -193,6 +196,7 @@ $(function () {
             tvKindLis.removeClass("focus");
             $(this).addClass("focus");
             commonAjax();
+            pageIndex = 0;
         });
 
         let tvAreaLis = $("ul.tv-area li");
@@ -201,6 +205,7 @@ $(function () {
             tvAreaLis.removeClass("focus");
             $(this).addClass("focus");
             commonAjax();
+            pageIndex = 0;
         });
 
         let tvYearLis = $("ul.tv-year li");
@@ -209,6 +214,7 @@ $(function () {
             tvYearLis.removeClass("focus");
             $(this).addClass("focus");
             commonAjax();
+            pageIndex = 0;
         });
 
         let tvSortLis = $("ul.tv-sort li");
@@ -217,6 +223,7 @@ $(function () {
             tvSortLis.removeClass("focus");
             $(this).addClass("focus");
             commonAjax();
+            pageIndex = 0;
         });
 
         let tvEditionLis = $("ul.tv-edition li");
@@ -225,6 +232,7 @@ $(function () {
             tvEditionLis.removeClass("focus");
             $(this).addClass("focus");
             commonAjax();
+            pageIndex = 0;
         });
 
         let tvChargeInfoLis = $("ul.tv-chargeInfo li");
@@ -233,6 +241,7 @@ $(function () {
             tvChargeInfoLis.removeClass("focus");
             $(this).addClass("focus");
             commonAjax();
+            pageIndex = 0;
         });
     });
 
@@ -246,6 +255,7 @@ $(function () {
             movieKindLis.removeClass("focus");
             $(this).addClass("focus");
             commonAjax();
+            pageIndex = 0;
         });
 
         let movieAreaLis = $("ul.movie-area li");
@@ -254,6 +264,7 @@ $(function () {
             movieAreaLis.removeClass("focus");
             $(this).addClass("focus");
             commonAjax();
+            pageIndex = 0;
         });
 
         let movieYearLis = $("ul.movie-year li");
@@ -262,6 +273,7 @@ $(function () {
             movieYearLis.removeClass("focus");
             $(this).addClass("focus");
             commonAjax();
+            pageIndex = 0;
         });
 
         let movieSortLis = $("ul.movie-sort li");
@@ -270,6 +282,7 @@ $(function () {
             movieSortLis.removeClass("focus");
             $(this).addClass("focus");
             commonAjax();
+            pageIndex = 0;
         });
 
         let movieEditionLis = $("ul.movie-edition li");
@@ -278,6 +291,7 @@ $(function () {
             movieEditionLis.removeClass("focus");
             $(this).addClass("focus");
             commonAjax();
+            pageIndex = 0;
         });
 
         let movieChargeInfoLis = $("ul.movie-chargeInfo li");
@@ -286,6 +300,7 @@ $(function () {
             movieChargeInfoLis.removeClass("focus");
             $(this).addClass("focus");
             commonAjax();
+            pageIndex = 0;
         });
     });
 
@@ -299,6 +314,7 @@ $(function () {
             childKindLis.removeClass("focus");
             $(this).addClass("focus");
             commonAjax();
+            pageIndex = 0;
         });
 
         let childFitAgeLis = $("ul.child-fitAge li");
@@ -307,6 +323,7 @@ $(function () {
             childFitAgeLis.removeClass("focus");
             $(this).addClass("focus");
             commonAjax();
+            pageIndex = 0;
         });
     });
 
@@ -320,6 +337,7 @@ $(function () {
             musicKindLis.removeClass("focus");
             $(this).addClass("focus");
             commonAjax();
+            pageIndex = 0;
         });
 
         let musicMusicStyleLis = $("ul.music-musicStyle li");
@@ -328,6 +346,7 @@ $(function () {
             musicMusicStyleLis.removeClass("focus");
             $(this).addClass("focus");
             commonAjax();
+            pageIndex = 0;
         });
 
         let musicSortLis = $("ul.music-sort li");
@@ -336,6 +355,7 @@ $(function () {
             musicSortLis.removeClass("focus");
             $(this).addClass("focus");
             commonAjax();
+            pageIndex = 0;
         });
     });
 
@@ -344,7 +364,7 @@ $(function () {
         rooter.pageIndexSelected = 0;
         $.ajax({
             type: "GET",
-            url: "/metv/listPcWeb?platform="+rooter.platformSelected+"&channelId="+rooter.channelIdSelected+"&pn="+rooter.pageIndexSelected+"&pc="+rooter.pageSizeSelected+"&hudong="+rooter.hudongSelected+"&_support="+rooter.supportSelected+"&kind="+rooter.kindSelected+"&area="+rooter.areaSelected+"&sort="+rooter.sortSelected+"&abroad="+rooter.abroadSelected+"&src="+rooter.srcSelected + "&year=" + rooter.yearSelected + "&edition=" + rooter.editionSelected + "&chargeInfo=" + rooter.chargeInfoSelected + "&fitAge=" + rooter.fitAgeSelected + "&musicStyle=" + rooter.musicStyleSelected,
+            url: "/metv/listPcWeb?platform="+rooter.platformSelected+"&channelId="+rooter.channelIdSelected+"&pageIndex="+rooter.pageIndexSelected+"&pageSize="+rooter.pageSizeSelected+"&hudong="+rooter.hudongSelected+"&_support="+rooter.supportSelected+"&kind="+rooter.kindSelected+"&area="+rooter.areaSelected+"&sort="+rooter.sortSelected+"&abroad="+rooter.abroadSelected+"&src="+rooter.srcSelected + "&year=" + rooter.yearSelected + "&edition=" + rooter.editionSelected + "&chargeInfo=" + rooter.chargeInfoSelected + "&fitAge=" + rooter.fitAgeSelected + "&musicStyle=" + rooter.musicStyleSelected,
             dataType: "json",
             success: function (data) {
                 rooter.videoList = data.data.hitDocs;
