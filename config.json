@@ -1,0 +1,20 @@
+{
+  "app_name": "iris_project",
+  "port": 8080,
+  "mode": "dev",
+  "data_source": {
+    "driver": "mysql",
+    "addr": "ljxwtl.cn",
+    "port": 3306,
+    "user_name": "root",
+    "password": "wtl199201180271",
+    "data_base": "order"
+  },
+  "redis": {
+    "net_work": "tcp",
+    "addr": "",
+    "port": 6317,
+    "password": "",
+    "prefix": "iris_redis_namespace"
+  }
+}

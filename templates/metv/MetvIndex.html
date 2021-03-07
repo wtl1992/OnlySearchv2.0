@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>千度一下---芒果tv</title>
+    <meta name="keywords" content="芒果TV,千度,千度搜索,千度网,搜索引擎大全,高级搜索,搜索神器,搜索大全"/>
+    <meta name="description" content="芒果TV,千度,千度一下，你更知道,千度搜索,千度网,搜索引擎大全,高级搜索,搜索神器,搜索大全"/>
+    <link rel="icon" href="/static/index_logo.png" type="image/icon"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/metv/index.css"/>
+    <script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/vue.js"></script>
+    <script type="text/javascript" src="/static/js/vue-lazyload.js"></script>
+    <script type="text/javascript" src="/static/js/metv/index.js"></script>
+</head>
+<body>
+<div id="rooter">
+    <div class="searchArea">
+        <a target="_blank" class="logo" title="祥龙检索，千度一下"><img src="/static/images/metv/homelogo.png"></a>
+        <input type="text" placeholder="请入要查询的内容">
+        <a target="_blank" class="searchButton">千度一下</a>
+    </div>
+
+    <ul class="main">
+        <li v-for="type,index in catalogue" v-html="type.channelName" :channelId="type.channelId" :class="index == 0 ? 'focus': ''">
+        </li>
+    </ul>
+
+    <div v-if="currentChannel === 'variety'" class="variety">
+        <ul class="variety-kind">
+            <li v-for="(item,index) in varietyKind" :class="index+1 === varietyKindCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :kind="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="variety-area">
+            <li v-for="(item,index) in varietyArea" :class="index+1 === varietyAreaCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :area="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="variety-sort">
+            <li v-for="(item,index) in varietySort" :class="index+1 === varietySortCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :sort="item[1]"></span>
+            </li>
+        </ul>
+
+        <ul class="content">
+            <li v-for="(item,index) in videoList">
+                <a target="_blank" :href="'/play/playMovieWithThreePart?url=' + 'https://www.mgtv.com/b/' + item.clipId + '/' + item.playPartId + '.html?lastp=list_index' + '&name=' + item.story">
+                    <img v-lazy="item.img">
+                </a>
+                <p v-html="item.title"></p>
+                <p v-html="item.subtitle"></p>
+                <p v-html="item.story"></p>
+            </li>
+        </ul>
+    </div>
+
+    <div v-if="currentChannel === 'tv'" class="tv">
+        <ul class="tv-kind">
+            <li v-for="(item,index) in tvKind" :class="index+1 === tvKindCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :kind="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="tv-area">
+            <li v-for="(item,index) in tvArea" :class="index+1 === tvAreaCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :area="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="tv-year">
+            <li v-for="(item,index) in tvYear" :class="index+1 === tvYearCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :year="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="tv-sort">
+            <li v-for="(item,index) in tvSort" :class="index+1 === tvSortCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :sort="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="tv-edition">
+            <li v-for="(item,index) in tvEdition" :class="index+1 === tvEditionCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :edition="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="tv-chargeInfo">
+            <li v-for="(item,index) in tvChargeInfo" :class="index+1 === tvChargeInfoCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :chargeInfo="item[1]"></span>
+            </li>
+        </ul>
+
+        <ul class="content">
+            <li v-for="(item,index) in videoList">
+                <a target="_blank" :href="'/tv/showTv?url=' + 'https://www.mgtv.com/b/' + item.clipId + '/' + item.playPartId + '.html?lastp=list_index' + '&name=' + item.title">
+                    <img v-lazy="item.img">
+                </a>
+                <p v-html="item.updateInfo"></p>
+                <p v-html="item.title"></p>
+                <p v-html="item.subtitle"></p>
+                <p v-html="item.story"></p>
+            </li>
+        </ul>
+    </div>
+
+    <div v-if="currentChannel === 'movie'" class="movie">
+        <ul class="movie-kind">
+            <li v-for="(item,index) in movieKind" :class="index+1 === movieKindCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :kind="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="movie-area">
+            <li v-for="(item,index) in movieArea" :class="index+1 === movieAreaCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :area="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="movie-year">
+            <li v-for="(item,index) in movieYear" :class="index+1 === movieYearCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :year="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="movie-sort">
+            <li v-for="(item,index) in movieSort" :class="index+1 === movieSortCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :sort="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="movie-edition">
+            <li v-for="(item,index) in movieEdition" :class="index+1 === movieEditionCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :edition="item[1]"></span>
+            </li>
+        </ul>
+
+        <ul class="content">
+            <li v-for="(item,index) in videoList">
+                <a target="_blank" :href="'/play/playMovieWithThreePart?url=' + 'https://www.mgtv.com/b/' + item.clipId + '/' + item.playPartId + '.html?lastp=list_index' + '&name=' + item.title">
+                    <img v-lazy="item.img">
+                </a>
+                <p v-html="item.updateInfo"></p>
+                <p v-html="item.title"></p>
+                <p v-html="item.subtitle"></p>
+                <p v-html="item.story"></p>
+            </li>
+        </ul>
+    </div>
+
+    <div v-if="currentChannel === 'child'" class="child">
+        <ul class="child-kind">
+            <li v-for="(item,index) in childKind" :class="index+1 === childKindCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :kind="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="child-fitAge">
+            <li v-for="(item,index) in childFitAge" :class="index+1 === childFitAgeCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :fitAge="item[1]"></span>
+            </li>
+        </ul>
+
+        <ul class="content">
+            <li v-for="(item,index) in videoList">
+                <a target="_blank" :href="'/tv/showTv?url=' + 'https://www.mgtv.com/b/' + item.clipId + '/' + item.playPartId + '.html?lastp=list_index' + '&name=' + item.title">
+                    <img v-lazy="item.img">
+                </a>
+                <p v-html="item.updateInfo"></p>
+                <p v-html="item.title"></p>
+                <p v-html="item.subtitle"></p>
+                <p v-html="item.story"></p>
+            </li>
+        </ul>
+    </div>
+
+    <div v-if="currentChannel === 'music'" class="music">
+        <ul class="music-kind">
+            <li v-for="(item,index) in musicKind" :class="index+1 === musicKindCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :kind="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="music-musicStyle">
+            <li v-for="(item,index) in musicMusicStyle" :class="index+1 === musicMusicStyleCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :musicStyle="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="music-sort">
+            <li v-for="(item,index) in musicSort" :class="index+1 === musicSortCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :sort="item[1]"></span>
+            </li>
+        </ul>
+
+        <ul class="content">
+            <li v-for="(item,index) in videoList">
+                <a target="_blank" :href="'/play/playMovieWithThreePart?url=' + 'https://www.mgtv.com/b/' + item.clipId + '/' + item.playPartId + '.html?lastp=list_index' + '&name=' + item.title">
+                    <img v-lazy="item.img">
+                </a>
+                <p v-html="item.updateInfo"></p>
+                <p v-html="item.title"></p>
+                <p v-html="item.subtitle"></p>
+                <p v-html="item.story"></p>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
