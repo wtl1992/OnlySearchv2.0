@@ -78,6 +78,23 @@ $(function () {
                 musicChargeInfoCurrentIndex: null,
                 musicFitAgeCurrentIndex: null,
                 musicMusicStyleCurrentIndex: null,
+                comic: null,
+                comicKind: null,
+                comicArea: null,
+                comicYear: null,
+                comicSort: null,
+                comicEdition: null,
+                comicChargeInfo: null,
+                comicFitAge: null,
+                comicMusicStyle: null,
+                comicKindCurrentIndex: null,
+                comicAreaCurrentIndex: null,
+                comicYearCurrentIndex: null,
+                comicSortCurrentIndex: null,
+                comicEditionCurrentIndex: null,
+                comicChargeInfoCurrentIndex: null,
+                comicFitAgeCurrentIndex: null,
+                comicMusicStyleCurrentIndex: null,
                 platformSelected: null,
                 channelIdSelected: null,
                 pageIndexSelected: null,
@@ -143,6 +160,11 @@ $(function () {
                     rooter.currentChannel = "music";
                     rooter.channelIdSelected = "20";
                     readMusicConfig();
+                    break;
+                case "动漫":
+                    rooter.currentChannel = "comic";
+                    rooter.channelIdSelected = "50";
+                    readComicConfig();
                     break;
                 default:
                     break;
@@ -353,6 +375,47 @@ $(function () {
         musicSortLis.unbind().click(function () {
             rooter.sortSelected = $(this).find("span").attr("sort");
             musicSortLis.removeClass("focus");
+            $(this).addClass("focus");
+            commonAjax();
+            pageIndex = 0;
+        });
+    });
+
+    rooter.$watch("comic", function () {
+        rooter.currentChannel = "comic";
+        commonAjax();
+
+        let comicKindLis = $("ul.comic-kind li");
+        comicKindLis.unbind().click(function () {
+            rooter.kindSelected = $(this).find("span").attr("kind");
+            comicKindLis.removeClass("focus");
+            $(this).addClass("focus");
+            commonAjax();
+            pageIndex = 0;
+        });
+
+        let comicAreaLis = $("ul.comic-area li");
+        comicAreaLis.unbind().click(function () {
+            rooter.areaSelected = $(this).find("span").attr("area");
+            comicAreaLis.removeClass("focus");
+            $(this).addClass("focus");
+            commonAjax();
+            pageIndex = 0;
+        });
+
+        let comicEditionLis = $("ul.comic-edition li");
+        comicEditionLis.unbind().click(function () {
+            rooter.sortSelected = $(this).find("span").attr("edition");
+            comicEditionLis.removeClass("focus");
+            $(this).addClass("focus");
+            commonAjax();
+            pageIndex = 0;
+        });
+
+        let comicSortLis = $("ul.comic-sort li");
+        comicSortLis.unbind().click(function () {
+            rooter.sortSelected = $(this).find("span").attr("sort");
+            comicSortLis.removeClass("focus");
             $(this).addClass("focus");
             commonAjax();
             pageIndex = 0;
@@ -596,6 +659,52 @@ $(function () {
                 rooter.chargeInfoSelected = "";
                 rooter.fitAgeSelected = "";
                 rooter.musicStyleSelected = rooter.musicMusicStyle[rooter.musicMusicStyleCurrentIndex - 1][1];
+            }
+        });
+    }
+
+    function readComicConfig() {
+        $.ajax({
+            type: "GET",
+            url: "/static/config/metv/comic-config.json",
+            dataType: "json",
+            success: function (data) {
+                rooter.comic = data["动漫"];
+                rooter.comicKind = rooter.comic.kind;
+                rooter.comicArea = rooter.comic.area;
+                rooter.comicYear = rooter.comic.year;
+                rooter.comicSort = rooter.comic.sort;
+                rooter.comicEdition = rooter.comic.edition;
+                rooter.comicChargeInfo = rooter.comic.chargeInfo;
+                rooter.comicFitAge = rooter.comic.fitAge;
+                rooter.comicMusicStyle = rooter.comic.comicStyle;
+                rooter.comicKindCurrentIndex = 1;
+                rooter.comicAreaCurrentIndex = 1;
+                rooter.comicYearCurrentIndex = 1;
+                rooter.comicSortCurrentIndex = 1;
+                rooter.comicEditionCurrentIndex = 1;
+                rooter.comicChargeInfoCurrentIndex = 1;
+                rooter.comicFitAgeCurrentIndex = 1;
+                rooter.comicMusicStyleCurrentIndex = 1;
+
+                //重置数据
+                rooter.currentChannel = "comic";
+                rooter.platformSelected = "pcweb";
+                rooter.channelIdSelected = "50";
+                rooter.pageIndexSelected = "1";
+                rooter.pageSizeSelected = "80";
+                rooter.hudongSelected = "1";
+                rooter.supportSelected = "10000000";
+                rooter.kindSelected = rooter.comicKind[rooter.comicKindCurrentIndex - 1][1];
+                rooter.areaSelected = rooter.comicArea[rooter.comicAreaCurrentIndex - 1][1];
+                rooter.sortSelected = rooter.comicSort[rooter.comicSortCurrentIndex - 1][1];
+                rooter.abroadSelected = "";
+                rooter.srcSelected = "";
+                rooter.yearSelected = "";
+                rooter.editionSelected = rooter.comicEdition[rooter.comicEditionCurrentIndex - 1][1];
+                rooter.chargeInfoSelected = "";
+                rooter.fitAgeSelected = "";
+                rooter.musicStyleSelected = "";
             }
         });
     }

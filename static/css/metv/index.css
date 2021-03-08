@@ -199,3 +199,22 @@ div.searchArea a.searchButton:hover {
     color: #FFFFFF;
     font-weight: bolder;
 }
+
+
+#rooter div.comic ul.content li{
+    height: 390px;
+    position: relative;
+}
+
+#rooter div.comic ul.content li a img{
+    width: 208px;
+    height: 291px;
+}
+
+#rooter div.comic ul.content li p:nth-of-type(1){
+    position: absolute;
+    bottom: 110px;
+    right: 10px;
+    color: #FFFFFF;
+    font-weight: bolder;
+}

@@ -193,6 +193,41 @@
             </li>
         </ul>
     </div>
+
+    <div v-if="currentChannel === 'comic'" class="comic">
+        <ul class="comic-kind">
+            <li v-for="(item,index) in comicKind" :class="index+1 === comicKindCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :kind="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="comic-area">
+            <li v-for="(item,index) in comicArea" :class="index+1 === comicAreaCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :area="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="comic-edition">
+            <li v-for="(item,index) in comicEdition" :class="index+1 === comicEditionCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :edition="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="comic-sort">
+            <li v-for="(item,index) in comicSort" :class="index+1 === comicSortCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :sort="item[1]"></span>
+            </li>
+        </ul>
+
+        <ul class="content">
+            <li v-for="(item,index) in videoList">
+                <a target="_blank" :href="'/tv/showTv?url=' + 'https://www.mgtv.com/b/' + item.clipId + '/' + item.playPartId + '.html?lastp=list_index' + '&name=' + item.title">
+                    <img v-lazy="item.img">
+                </a>
+                <p v-html="item.updateInfo"></p>
+                <p v-html="item.title"></p>
+                <p v-html="item.subtitle"></p>
+                <p v-html="item.story"></p>
+            </li>
+        </ul>
+    </div>
 </div>
 </body>
 </html>

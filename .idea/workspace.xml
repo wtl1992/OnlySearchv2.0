@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71a621b3-c72c-4a21-9d66-7bbb66443b6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cert/1_www.ljxwtl.cn_bundle.crt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cert/2_www.ljxwtl.cn.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/config/metv/comic-config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/metv/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/metv/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/metv/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/metv/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/metv/MetvIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/metv/MetvIndex.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,18 +48,18 @@
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\GoProjects\OnlySearchv2.0\cert" />
-      <recent name="D:\GoProjects\OnlySearchv2.0\templates\tv" />
-      <recent name="D:\GoProjects\OnlySearchv2.0\templates\metv" />
-      <recent name="D:\GoProjects\OnlySearchv2.0\static\config\metv" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\GoProjects\OnlySearchv2.0\static\config\metv" />
       <recent name="D:\GoProjects\OnlySearchv2.0\static\images" />
       <recent name="D:\GoProjects\OnlySearchv2.0\static\js\tv" />
       <recent name="D:\GoProjects\OnlySearchv2.0\static\css\tv" />
       <recent name="D:\GoProjects\OnlySearchv2.0\templates\play" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GoProjects\OnlySearchv2.0\cert" />
+      <recent name="D:\GoProjects\OnlySearchv2.0\templates\tv" />
+      <recent name="D:\GoProjects\OnlySearchv2.0\templates\metv" />
+      <recent name="D:\GoProjects\OnlySearchv2.0\static\config\metv" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -105,7 +105,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -113,7 +115,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="上传增强版" />
-    <option name="LAST_COMMIT_MESSAGE" value="上传增强版" />
+    <MESSAGE value="增加https" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加https" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
