@@ -218,3 +218,150 @@ div.searchArea a.searchButton:hover {
     color: #FFFFFF;
     font-weight: bolder;
 }
+
+#rooter div.documentary ul.content li{
+    height: 390px;
+    position: relative;
+}
+
+#rooter div.documentary ul.content li a img{
+    width: 208px;
+    height: 291px;
+}
+
+#rooter div.documentary ul.content li p:nth-of-type(1){
+    position: absolute;
+    bottom: 110px;
+    right: 10px;
+    color: #FFFFFF;
+    font-weight: bolder;
+}
+
+#rooter div.happyLife ul.content li{
+    height: 390px;
+    position: relative;
+}
+
+#rooter div.happyLife ul.content li a img{
+    width: 208px;
+    height: 291px;
+}
+
+#rooter div.happyLife ul.content li p:nth-of-type(1){
+    position: absolute;
+    bottom: 110px;
+    right: 10px;
+    color: #FFFFFF;
+    font-weight: bolder;
+}
+
+
+#rooter div.news ul.content li{
+    height: 390px;
+    position: relative;
+}
+
+#rooter div.news ul.content li a img{
+    width: 208px;
+    height: 291px;
+}
+
+#rooter div.news ul.content li p:nth-of-type(1){
+    position: absolute;
+    bottom: 110px;
+    right: 10px;
+    color: #FFFFFF;
+    font-weight: bolder;
+}
+
+#rooter div.enterment ul.content li{
+    height: 390px;
+    position: relative;
+}
+
+#rooter div.enterment ul.content li a img{
+    width: 208px;
+    height: 291px;
+}
+
+#rooter div.enterment ul.content li p:nth-of-type(1){
+    position: absolute;
+    bottom: 110px;
+    right: 10px;
+    color: #FFFFFF;
+    font-weight: bolder;
+}
+
+
+#rooter div.education ul.content li{
+    height: 390px;
+    position: relative;
+}
+
+#rooter div.education ul.content li a img{
+    width: 208px;
+    height: 291px;
+}
+
+#rooter div.education ul.content li p:nth-of-type(1){
+    position: absolute;
+    bottom: 110px;
+    right: 10px;
+    color: #FFFFFF;
+    font-weight: bolder;
+}
+
+
+#rooter div.game ul.content li{
+    height: 390px;
+    position: relative;
+}
+
+#rooter div.game ul.content li a img{
+    width: 208px;
+    height: 291px;
+}
+
+#rooter div.game ul.content li p:nth-of-type(1){
+    position: absolute;
+    bottom: 110px;
+    right: 10px;
+    color: #FFFFFF;
+    font-weight: bolder;
+}
+
+#rooter div.sport ul.content li{
+    height: 390px;
+    position: relative;
+}
+
+#rooter div.sport ul.content li a img{
+    width: 208px;
+    height: 291px;
+}
+
+#rooter div.sport ul.content li p:nth-of-type(1){
+    position: absolute;
+    bottom: 110px;
+    right: 10px;
+    color: #FFFFFF;
+    font-weight: bolder;
+}
+
+#rooter div.origin ul.content li{
+    height: 390px;
+    position: relative;
+}
+
+#rooter div.origin ul.content li a img{
+    width: 208px;
+    height: 291px;
+}
+
+#rooter div.origin ul.content li p:nth-of-type(1){
+    position: absolute;
+    bottom: 110px;
+    right: 10px;
+    color: #FFFFFF;
+    font-weight: bolder;
+}

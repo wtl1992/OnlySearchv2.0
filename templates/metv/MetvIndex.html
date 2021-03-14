@@ -44,7 +44,7 @@
 
         <ul class="content">
             <li v-for="(item,index) in videoList">
-                <a target="_blank" :href="'/play/playMovieWithThreePart?url=' + 'https://www.mgtv.com/b/' + item.clipId + '/' + item.playPartId + '.html?lastp=list_index' + '&name=' + item.story">
+                <a target="_blank" :href="'/metv/showDocumentary?url=' + 'https://www.mgtv.com/b/' + item.clipId + '/' + item.playPartId + '.html?lastp=list_index' + '&name=' + item.story">
                     <img v-lazy="item.img">
                 </a>
                 <p v-html="item.title"></p>
@@ -219,6 +219,209 @@
         <ul class="content">
             <li v-for="(item,index) in videoList">
                 <a target="_blank" :href="'/tv/showTv?url=' + 'https://www.mgtv.com/b/' + item.clipId + '/' + item.playPartId + '.html?lastp=list_index' + '&name=' + item.title">
+                    <img v-lazy="item.img">
+                </a>
+                <p v-html="item.updateInfo"></p>
+                <p v-html="item.title"></p>
+                <p v-html="item.subtitle"></p>
+                <p v-html="item.story"></p>
+            </li>
+        </ul>
+    </div>
+
+
+    <div v-if="currentChannel === 'documentary'" class="documentary">
+        <ul class="documentary-kind">
+            <li v-for="(item,index) in documentaryKind" :class="index+1 === documentaryKindCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :kind="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="documentary-sort">
+            <li v-for="(item,index) in documentarySort" :class="index+1 === documentarySortCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :sort="item[1]"></span>
+            </li>
+        </ul>
+
+        <ul class="content">
+            <li v-for="(item,index) in videoList">
+                <a target="_blank" :href="'/metv/showDocumentary?url=' + 'https://www.mgtv.com/b/' + item.clipId + '/' + item.playPartId + '.html?lastp=list_index' + '&name=' + item.title">
+                    <img v-lazy="item.img">
+                </a>
+                <p v-html="item.updateInfo"></p>
+                <p v-html="item.title"></p>
+                <p v-html="item.subtitle"></p>
+                <p v-html="item.story"></p>
+            </li>
+        </ul>
+    </div>
+
+    <div v-if="currentChannel === 'happyLife'" class="happyLife">
+        <ul class="happyLife-kind">
+            <li v-for="(item,index) in happyLifeKind" :class="index+1 === happyLifeKindCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :kind="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="happyLife-sort">
+            <li v-for="(item,index) in happyLifeSort" :class="index+1 === happyLifeSortCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :sort="item[1]"></span>
+            </li>
+        </ul>
+
+        <ul class="content">
+            <li v-for="(item,index) in videoList">
+                <a target="_blank" :href="'/metv/showDocumentary?url=' + 'https://www.mgtv.com/b/' + item.clipId + '/' + item.playPartId + '.html?lastp=list_index' + '&name=' + item.title">
+                    <img v-lazy="item.img">
+                </a>
+                <p v-html="item.updateInfo"></p>
+                <p v-html="item.title"></p>
+                <p v-html="item.subtitle"></p>
+                <p v-html="item.story"></p>
+            </li>
+        </ul>
+    </div>
+
+
+    <div v-if="currentChannel === 'news'" class="news">
+        <ul class="news-kind">
+            <li v-for="(item,index) in newsKind" :class="index+1 === newsKindCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :kind="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="news-sort">
+            <li v-for="(item,index) in newsSort" :class="index+1 === newsSortCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :sort="item[1]"></span>
+            </li>
+        </ul>
+
+        <ul class="content">
+            <li v-for="(item,index) in videoList">
+                <a target="_blank" :href="'/metv/showDocumentary?url=' + 'https://www.mgtv.com/b/' + item.clipId + '/' + item.playPartId + '.html?lastp=list_index' + '&name=' + item.title">
+                    <img v-lazy="item.img">
+                </a>
+                <p v-html="item.updateInfo"></p>
+                <p v-html="item.title"></p>
+                <p v-html="item.subtitle"></p>
+                <p v-html="item.story"></p>
+            </li>
+        </ul>
+    </div>
+
+    <div v-if="currentChannel === 'enterment'" class="enterment">
+        <ul class="enterment-kind">
+            <li v-for="(item,index) in entermentKind" :class="index+1 === entermentKindCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :kind="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="enterment-sort">
+            <li v-for="(item,index) in entermentSort" :class="index+1 === entermentSortCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :sort="item[1]"></span>
+            </li>
+        </ul>
+
+        <ul class="content">
+            <li v-for="(item,index) in videoList">
+                <a target="_blank" :href="'/metv/showDocumentary?url=' + 'https://www.mgtv.com/b/' + item.clipId + '/' + item.playPartId + '.html?lastp=list_index' + '&name=' + item.title">
+                    <img v-lazy="item.img">
+                </a>
+                <p v-html="item.updateInfo"></p>
+                <p v-html="item.title"></p>
+                <p v-html="item.subtitle"></p>
+                <p v-html="item.story"></p>
+            </li>
+        </ul>
+    </div>
+
+    <div v-if="currentChannel === 'education'" class="education">
+        <ul class="education-kind">
+            <li v-for="(item,index) in educationKind" :class="index+1 === educationKindCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :kind="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="education-sort">
+            <li v-for="(item,index) in educationSort" :class="index+1 === educationSortCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :sort="item[1]"></span>
+            </li>
+        </ul>
+
+        <ul class="content">
+            <li v-for="(item,index) in videoList">
+                <a target="_blank" :href="'/metv/showDocumentary?url=' + 'https://www.mgtv.com/b/' + item.clipId + '/' + item.playPartId + '.html?lastp=list_index' + '&name=' + item.title">
+                    <img v-lazy="item.img">
+                </a>
+                <p v-html="item.updateInfo"></p>
+                <p v-html="item.title"></p>
+                <p v-html="item.subtitle"></p>
+                <p v-html="item.story"></p>
+            </li>
+        </ul>
+    </div>
+
+    <div v-if="currentChannel === 'game'" class="game">
+        <ul class="game-kind">
+            <li v-for="(item,index) in gameKind" :class="index+1 === gameKindCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :kind="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="game-sort">
+            <li v-for="(item,index) in gameSort" :class="index+1 === gameSortCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :sort="item[1]"></span>
+            </li>
+        </ul>
+
+        <ul class="content">
+            <li v-for="(item,index) in videoList">
+                <a target="_blank" :href="'/metv/showDocumentary?url=' + 'https://www.mgtv.com/b/' + item.clipId + '/' + item.playPartId + '.html?lastp=list_index' + '&name=' + item.title">
+                    <img v-lazy="item.img">
+                </a>
+                <p v-html="item.updateInfo"></p>
+                <p v-html="item.title"></p>
+                <p v-html="item.subtitle"></p>
+                <p v-html="item.story"></p>
+            </li>
+        </ul>
+    </div>
+
+    <div v-if="currentChannel === 'sport'" class="sport">
+        <ul class="sport-kind">
+            <li v-for="(item,index) in sportKind" :class="index+1 === sportKindCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :kind="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="sport-sort">
+            <li v-for="(item,index) in sportSort" :class="index+1 === sportSortCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :sort="item[1]"></span>
+            </li>
+        </ul>
+
+        <ul class="content">
+            <li v-for="(item,index) in videoList">
+                <a target="_blank" :href="'/metv/showDocumentary?url=' + 'https://www.mgtv.com/b/' + item.clipId + '/' + item.playPartId + '.html?lastp=list_index' + '&name=' + item.title">
+                    <img v-lazy="item.img">
+                </a>
+                <p v-html="item.updateInfo"></p>
+                <p v-html="item.title"></p>
+                <p v-html="item.subtitle"></p>
+                <p v-html="item.story"></p>
+            </li>
+        </ul>
+    </div>
+
+
+    <div v-if="currentChannel === 'origin'" class="origin">
+        <ul class="origin-kind">
+            <li v-for="(item,index) in originKind" :class="index+1 === originKindCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :kind="item[1]"></span>
+            </li>
+        </ul>
+        <ul class="origin-sort">
+            <li v-for="(item,index) in originSort" :class="index+1 === originSortCurrentIndex ? 'focus' : ''" :index="index + 1">
+                <span v-html="item[0]" :sort="item[1]"></span>
+            </li>
+        </ul>
+
+        <ul class="content">
+            <li v-for="(item,index) in videoList">
+                <a target="_blank" :href="'/metv/showDocumentary?url=' + 'https://www.mgtv.com/b/' + item.clipId + '/' + item.playPartId + '.html?lastp=list_index' + '&name=' + item.title">
                     <img v-lazy="item.img">
                 </a>
                 <p v-html="item.updateInfo"></p>

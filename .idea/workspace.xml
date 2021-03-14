@@ -2,8 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71a621b3-c72c-4a21-9d66-7bbb66443b6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/config/metv/comic-config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cert/2_ljxwtl.cn.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/metv/MetvPcWeb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/MetvScheduler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/config/metv/documentary-config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/config/metv/education-config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/config/metv/enterment-config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/config/metv/game-config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/config/metv/happyLife-config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/config/metv/news-config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/config/metv/origin-config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/config/metv/sport-config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/metv/showDocumentary.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/metv/showDocumentary.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/metv/ShowDocumentary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cert/1_www.ljxwtl.cn_bundle.crt" beforeDir="false" afterPath="$PROJECT_DIR$/cert/1_ljxwtl.cn_bundle.crt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cert/2_www.ljxwtl.cn.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/MetvController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/MetvController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/metv/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/metv/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/metv/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/metv/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/metv/MetvIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/metv/MetvIndex.html" afterDir="false" />
@@ -18,6 +37,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="Go File" />
       </list>
@@ -50,13 +70,14 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\GoProjects\OnlySearchv2.0\static\config\metv" />
+      <recent name="D:\GoProjects\OnlySearchv2.0\cert" />
       <recent name="D:\GoProjects\OnlySearchv2.0\static\images" />
       <recent name="D:\GoProjects\OnlySearchv2.0\static\js\tv" />
       <recent name="D:\GoProjects\OnlySearchv2.0\static\css\tv" />
-      <recent name="D:\GoProjects\OnlySearchv2.0\templates\play" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GoProjects\OnlySearchv2.0\cert" />
+      <recent name="D:\GoProjects\OnlySearchv2.0\model\metv" />
       <recent name="D:\GoProjects\OnlySearchv2.0\templates\tv" />
       <recent name="D:\GoProjects\OnlySearchv2.0\templates\metv" />
       <recent name="D:\GoProjects\OnlySearchv2.0\static\config\metv" />
@@ -116,7 +137,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="上传增强版" />
     <MESSAGE value="增加https" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加https" />
+    <MESSAGE value="新功能动漫模块添加" />
+    <option name="LAST_COMMIT_MESSAGE" value="新功能动漫模块添加" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

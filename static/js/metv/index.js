@@ -95,6 +95,142 @@ $(function () {
                 comicChargeInfoCurrentIndex: null,
                 comicFitAgeCurrentIndex: null,
                 comicMusicStyleCurrentIndex: null,
+                documentary: null,
+                documentaryKind: null,
+                documentaryArea: null,
+                documentaryYear: null,
+                documentarySort: null,
+                documentaryEdition: null,
+                documentaryChargeInfo: null,
+                documentaryFitAge: null,
+                documentaryMusicStyle: null,
+                documentaryKindCurrentIndex: null,
+                documentaryAreaCurrentIndex: null,
+                documentaryYearCurrentIndex: null,
+                documentarySortCurrentIndex: null,
+                documentaryEditionCurrentIndex: null,
+                documentaryChargeInfoCurrentIndex: null,
+                documentaryFitAgeCurrentIndex: null,
+                documentaryMusicStyleCurrentIndex: null,
+                happyLife: null,
+                happyLifeKind: null,
+                happyLifeArea: null,
+                happyLifeYear: null,
+                happyLifeSort: null,
+                happyLifeEdition: null,
+                happyLifeChargeInfo: null,
+                happyLifeFitAge: null,
+                happyLifeMusicStyle: null,
+                happyLifeKindCurrentIndex: null,
+                happyLifeAreaCurrentIndex: null,
+                happyLifeYearCurrentIndex: null,
+                happyLifeSortCurrentIndex: null,
+                happyLifeEditionCurrentIndex: null,
+                happyLifeChargeInfoCurrentIndex: null,
+                happyLifeFitAgeCurrentIndex: null,
+                happyLifeMusicStyleCurrentIndex: null,
+                news: null,
+                newsKind: null,
+                newsArea: null,
+                newsYear: null,
+                newsSort: null,
+                newsEdition: null,
+                newsChargeInfo: null,
+                newsFitAge: null,
+                newsMusicStyle: null,
+                newsKindCurrentIndex: null,
+                newsAreaCurrentIndex: null,
+                newsYearCurrentIndex: null,
+                newsSortCurrentIndex: null,
+                newsEditionCurrentIndex: null,
+                newsChargeInfoCurrentIndex: null,
+                newsFitAgeCurrentIndex: null,
+                newsMusicStyleCurrentIndex: null,
+                enterment: null,
+                entermentKind: null,
+                entermentArea: null,
+                entermentYear: null,
+                entermentSort: null,
+                entermentEdition: null,
+                entermentChargeInfo: null,
+                entermentFitAge: null,
+                entermentMusicStyle: null,
+                entermentKindCurrentIndex: null,
+                entermentAreaCurrentIndex: null,
+                entermentYearCurrentIndex: null,
+                entermentSortCurrentIndex: null,
+                entermentEditionCurrentIndex: null,
+                entermentChargeInfoCurrentIndex: null,
+                entermentFitAgeCurrentIndex: null,
+                entermentMusicStyleCurrentIndex: null,
+                education: null,
+                educationKind: null,
+                educationArea: null,
+                educationYear: null,
+                educationSort: null,
+                educationEdition: null,
+                educationChargeInfo: null,
+                educationFitAge: null,
+                educationMusicStyle: null,
+                educationKindCurrentIndex: null,
+                educationAreaCurrentIndex: null,
+                educationYearCurrentIndex: null,
+                educationSortCurrentIndex: null,
+                educationEditionCurrentIndex: null,
+                educationChargeInfoCurrentIndex: null,
+                educationFitAgeCurrentIndex: null,
+                educationMusicStyleCurrentIndex: null,
+                game: null,
+                gameKind: null,
+                gameArea: null,
+                gameYear: null,
+                gameSort: null,
+                gameEdition: null,
+                gameChargeInfo: null,
+                gameFitAge: null,
+                gameMusicStyle: null,
+                gameKindCurrentIndex: null,
+                gameAreaCurrentIndex: null,
+                gameYearCurrentIndex: null,
+                gameSortCurrentIndex: null,
+                gameEditionCurrentIndex: null,
+                gameChargeInfoCurrentIndex: null,
+                gameFitAgeCurrentIndex: null,
+                gameMusicStyleCurrentIndex: null,
+                sport: null,
+                sportKind: null,
+                sportArea: null,
+                sportYear: null,
+                sportSort: null,
+                sportEdition: null,
+                sportChargeInfo: null,
+                sportFitAge: null,
+                sportMusicStyle: null,
+                sportKindCurrentIndex: null,
+                sportAreaCurrentIndex: null,
+                sportYearCurrentIndex: null,
+                sportSortCurrentIndex: null,
+                sportEditionCurrentIndex: null,
+                sportChargeInfoCurrentIndex: null,
+                sportFitAgeCurrentIndex: null,
+                sportMusicStyleCurrentIndex: null,
+                origin: null,
+                originKind: null,
+                originArea: null,
+                originYear: null,
+                originSort: null,
+                originEdition: null,
+                originChargeInfo: null,
+                originFitAge: null,
+                originMusicStyle: null,
+                originKindCurrentIndex: null,
+                originAreaCurrentIndex: null,
+                originYearCurrentIndex: null,
+                originSortCurrentIndex: null,
+                originEditionCurrentIndex: null,
+                originChargeInfoCurrentIndex: null,
+                originFitAgeCurrentIndex: null,
+                originMusicStyleCurrentIndex: null,
                 platformSelected: null,
                 channelIdSelected: null,
                 pageIndexSelected: null,
@@ -165,6 +301,46 @@ $(function () {
                     rooter.currentChannel = "comic";
                     rooter.channelIdSelected = "50";
                     readComicConfig();
+                    break;
+                case "纪录片":
+                    rooter.currentChannel = "documentary";
+                    rooter.channelIdSelected = "51";
+                    readDocumentaryConfig();
+                    break;
+                case "乐活":
+                    rooter.currentChannel = "happyLife";
+                    rooter.channelIdSelected = "105";
+                    readHappyLifeConfig();
+                    break;
+                case "新闻":
+                    rooter.currentChannel = "happyLife";
+                    rooter.channelIdSelected = "106";
+                    readNewsConfig();
+                    break;
+                case "娱乐":
+                    rooter.currentChannel = "enterment";
+                    rooter.channelIdSelected = "113";
+                    readEntermentConfig();
+                    break;
+                case "教育":
+                    rooter.currentChannel = "education";
+                    rooter.channelIdSelected = "115";
+                    readEducationConfig();
+                    break;
+                case "游戏":
+                    rooter.currentChannel = "game";
+                    rooter.channelIdSelected = "116";
+                    readGameConfig();
+                    break;
+                case "体育":
+                    rooter.currentChannel = "sport";
+                    rooter.channelIdSelected = "117";
+                    readSportConfig();
+                    break;
+                case "原创":
+                    rooter.currentChannel = "origin";
+                    rooter.channelIdSelected = "111";
+                    readOriginConfig();
                     break;
                 default:
                     break;
@@ -422,6 +598,194 @@ $(function () {
         });
     });
 
+    rooter.$watch("documentary", function () {
+        rooter.currentChannel = "documentary";
+        commonAjax();
+
+        let documentaryKindLis = $("ul.documentary-kind li");
+        documentaryKindLis.unbind().click(function () {
+            rooter.kindSelected = $(this).find("span").attr("kind");
+            documentaryKindLis.removeClass("focus");
+            $(this).addClass("focus");
+            commonAjax();
+            pageIndex = 0;
+        });
+
+        let documentarySortLis = $("ul.documentary-sort li");
+        documentarySortLis.unbind().click(function () {
+            rooter.sortSelected = $(this).find("span").attr("sort");
+            documentarySortLis.removeClass("focus");
+            $(this).addClass("focus");
+            commonAjax();
+            pageIndex = 0;
+        });
+    });
+
+
+    rooter.$watch("happyLife", function () {
+        rooter.currentChannel = "happyLife";
+        commonAjax();
+
+        let happyLifeKindLis = $("ul.happyLife-kind li");
+        happyLifeKindLis.unbind().click(function () {
+            rooter.kindSelected = $(this).find("span").attr("kind");
+            happyLifeKindLis.removeClass("focus");
+            $(this).addClass("focus");
+            commonAjax();
+            pageIndex = 0;
+        });
+
+        let happyLifeSortLis = $("ul.happyLife-sort li");
+        happyLifeSortLis.unbind().click(function () {
+            rooter.sortSelected = $(this).find("span").attr("sort");
+            happyLifeSortLis.removeClass("focus");
+            $(this).addClass("focus");
+            commonAjax();
+            pageIndex = 0;
+        });
+    });
+
+    rooter.$watch("news", function () {
+        rooter.currentChannel = "news";
+        commonAjax();
+
+        let newsKindLis = $("ul.news-kind li");
+        newsKindLis.unbind().click(function () {
+            rooter.kindSelected = $(this).find("span").attr("kind");
+            newsKindLis.removeClass("focus");
+            $(this).addClass("focus");
+            commonAjax();
+            pageIndex = 0;
+        });
+
+        let newsSortLis = $("ul.news-sort li");
+        newsSortLis.unbind().click(function () {
+            rooter.sortSelected = $(this).find("span").attr("sort");
+            newsSortLis.removeClass("focus");
+            $(this).addClass("focus");
+            commonAjax();
+            pageIndex = 0;
+        });
+    });
+
+
+    rooter.$watch("enterment", function () {
+        rooter.currentChannel = "enterment";
+        commonAjax();
+
+        let entermentKindLis = $("ul.enterment-kind li");
+        entermentKindLis.unbind().click(function () {
+            rooter.kindSelected = $(this).find("span").attr("kind");
+            entermentKindLis.removeClass("focus");
+            $(this).addClass("focus");
+            commonAjax();
+            pageIndex = 0;
+        });
+
+        let entermentSortLis = $("ul.enterment-sort li");
+        entermentSortLis.unbind().click(function () {
+            rooter.sortSelected = $(this).find("span").attr("sort");
+            entermentSortLis.removeClass("focus");
+            $(this).addClass("focus");
+            commonAjax();
+            pageIndex = 0;
+        });
+    });
+
+
+    rooter.$watch("education", function () {
+        rooter.currentChannel = "education";
+        commonAjax();
+
+        let educationKindLis = $("ul.education-kind li");
+        educationKindLis.unbind().click(function () {
+            rooter.kindSelected = $(this).find("span").attr("kind");
+            educationKindLis.removeClass("focus");
+            $(this).addClass("focus");
+            commonAjax();
+            pageIndex = 0;
+        });
+
+        let educationSortLis = $("ul.education-sort li");
+        educationSortLis.unbind().click(function () {
+            rooter.sortSelected = $(this).find("span").attr("sort");
+            educationSortLis.removeClass("focus");
+            $(this).addClass("focus");
+            commonAjax();
+            pageIndex = 0;
+        });
+    });
+
+
+    rooter.$watch("game", function () {
+        rooter.currentChannel = "game";
+        commonAjax();
+
+        let gameKindLis = $("ul.game-kind li");
+        gameKindLis.unbind().click(function () {
+            rooter.kindSelected = $(this).find("span").attr("kind");
+            gameKindLis.removeClass("focus");
+            $(this).addClass("focus");
+            commonAjax();
+            pageIndex = 0;
+        });
+
+        let gameSortLis = $("ul.game-sort li");
+        gameSortLis.unbind().click(function () {
+            rooter.sortSelected = $(this).find("span").attr("sort");
+            gameSortLis.removeClass("focus");
+            $(this).addClass("focus");
+            commonAjax();
+            pageIndex = 0;
+        });
+    });
+
+
+    rooter.$watch("sport", function () {
+        rooter.currentChannel = "sport";
+        commonAjax();
+
+        let sportKindLis = $("ul.sport-kind li");
+        sportKindLis.unbind().click(function () {
+            rooter.kindSelected = $(this).find("span").attr("kind");
+            sportKindLis.removeClass("focus");
+            $(this).addClass("focus");
+            commonAjax();
+            pageIndex = 0;
+        });
+
+        let sportSortLis = $("ul.sport-sort li");
+        sportSortLis.unbind().click(function () {
+            rooter.sortSelected = $(this).find("span").attr("sort");
+            sportSortLis.removeClass("focus");
+            $(this).addClass("focus");
+            commonAjax();
+            pageIndex = 0;
+        });
+    });
+
+    rooter.$watch("origin", function () {
+        rooter.currentChannel = "origin";
+        commonAjax();
+
+        let originKindLis = $("ul.origin-kind li");
+        originKindLis.unbind().click(function () {
+            rooter.kindSelected = $(this).find("span").attr("kind");
+            originKindLis.removeClass("focus");
+            $(this).addClass("focus");
+            commonAjax();
+            pageIndex = 0;
+        });
+
+        let originSortLis = $("ul.origin-sort li");
+        originSortLis.unbind().click(function () {
+            rooter.sortSelected = $(this).find("span").attr("sort");
+            originSortLis.removeClass("focus");
+            $(this).addClass("focus");
+            commonAjax();
+            pageIndex = 0;
+        });
+    });
 
     function commonAjax() {
         rooter.pageIndexSelected = 0;
@@ -708,4 +1072,375 @@ $(function () {
             }
         });
     }
+
+
+    function readDocumentaryConfig() {
+        $.ajax({
+            type: "GET",
+            url: "/static/config/metv/documentary-config.json",
+            dataType: "json",
+            success: function (data) {
+                rooter.documentary = data["纪录片"];
+                rooter.documentaryKind = rooter.documentary.kind;
+                rooter.documentaryArea = rooter.documentary.area;
+                rooter.documentaryYear = rooter.documentary.year;
+                rooter.documentarySort = rooter.documentary.sort;
+                rooter.documentaryEdition = rooter.documentary.edition;
+                rooter.documentaryChargeInfo = rooter.documentary.chargeInfo;
+                rooter.documentaryFitAge = rooter.documentary.fitAge;
+                rooter.documentaryMusicStyle = rooter.documentary.musicStyle;
+                rooter.documentaryKindCurrentIndex = 1;
+                rooter.documentaryAreaCurrentIndex = 1;
+                rooter.documentaryYearCurrentIndex = 1;
+                rooter.documentarySortCurrentIndex = 1;
+                rooter.documentaryEditionCurrentIndex = 1;
+                rooter.documentaryChargeInfoCurrentIndex = 1;
+                rooter.documentaryFitAgeCurrentIndex = 1;
+                rooter.documentaryMusicStyleCurrentIndex = 1;
+
+                //重置数据
+                rooter.currentChannel = "documentary";
+                rooter.platformSelected = "pcweb";
+                rooter.channelIdSelected = "51";
+                rooter.pageIndexSelected = "1";
+                rooter.pageSizeSelected = "80";
+                rooter.hudongSelected = "1";
+                rooter.supportSelected = "10000000";
+                rooter.kindSelected = rooter.documentaryKind[rooter.documentaryKindCurrentIndex - 1][1];
+                rooter.areaSelected = "";
+                rooter.sortSelected = rooter.documentarySort[rooter.documentarySortCurrentIndex - 1][1];
+                rooter.abroadSelected = "";
+                rooter.srcSelected = "";
+                rooter.yearSelected = "";
+                rooter.editionSelected = "";
+                rooter.chargeInfoSelected = "";
+                rooter.fitAgeSelected = "";
+                rooter.musicStyleSelected = "";
+            }
+        });
+    }
+
+    function readHappyLifeConfig() {
+        $.ajax({
+            type: "GET",
+            url: "/static/config/metv/happyLife-config.json",
+            dataType: "json",
+            success: function (data) {
+                rooter.happyLife = data["乐活"];
+                rooter.happyLifeKind = rooter.happyLife.kind;
+                rooter.happyLifeArea = rooter.happyLife.area;
+                rooter.happyLifeYear = rooter.happyLife.year;
+                rooter.happyLifeSort = rooter.happyLife.sort;
+                rooter.happyLifeEdition = rooter.happyLife.edition;
+                rooter.happyLifeChargeInfo = rooter.happyLife.chargeInfo;
+                rooter.happyLifeFitAge = rooter.happyLife.fitAge;
+                rooter.happyLifeMusicStyle = rooter.happyLife.musicStyle;
+                rooter.happyLifeKindCurrentIndex = 1;
+                rooter.happyLifeAreaCurrentIndex = 1;
+                rooter.happyLifeYearCurrentIndex = 1;
+                rooter.happyLifeSortCurrentIndex = 1;
+                rooter.happyLifeEditionCurrentIndex = 1;
+                rooter.happyLifeChargeInfoCurrentIndex = 1;
+                rooter.happyLifeFitAgeCurrentIndex = 1;
+                rooter.happyLifeMusicStyleCurrentIndex = 1;
+
+                //重置数据
+                rooter.currentChannel = "happyLife";
+                rooter.platformSelected = "pcweb";
+                rooter.channelIdSelected = "105";
+                rooter.pageIndexSelected = "1";
+                rooter.pageSizeSelected = "80";
+                rooter.hudongSelected = "1";
+                rooter.supportSelected = "10000000";
+                rooter.kindSelected = rooter.happyLifeKind[rooter.happyLifeKindCurrentIndex - 1][1];
+                rooter.areaSelected = "";
+                rooter.sortSelected = rooter.happyLifeSort[rooter.happyLifeSortCurrentIndex - 1][1];
+                rooter.abroadSelected = "";
+                rooter.srcSelected = "";
+                rooter.yearSelected = "";
+                rooter.editionSelected = "";
+                rooter.chargeInfoSelected = "";
+                rooter.fitAgeSelected = "";
+                rooter.musicStyleSelected = "";
+            }
+        });
+    }
+
+    function readNewsConfig() {
+        $.ajax({
+            type: "GET",
+            url: "/static/config/metv/news-config.json",
+            dataType: "json",
+            success: function (data) {
+                rooter.news = data["新闻"];
+                rooter.newsKind = rooter.news.kind;
+                rooter.newsArea = rooter.news.area;
+                rooter.newsYear = rooter.news.year;
+                rooter.newsSort = rooter.news.sort;
+                rooter.newsEdition = rooter.news.edition;
+                rooter.newsChargeInfo = rooter.news.chargeInfo;
+                rooter.newsFitAge = rooter.news.fitAge;
+                rooter.newsMusicStyle = rooter.news.musicStyle;
+                rooter.newsKindCurrentIndex = 1;
+                rooter.newsAreaCurrentIndex = 1;
+                rooter.newsYearCurrentIndex = 1;
+                rooter.newsSortCurrentIndex = 1;
+                rooter.newsEditionCurrentIndex = 1;
+                rooter.newsChargeInfoCurrentIndex = 1;
+                rooter.newsFitAgeCurrentIndex = 1;
+                rooter.newsMusicStyleCurrentIndex = 1;
+
+                //重置数据
+                rooter.currentChannel = "news";
+                rooter.platformSelected = "pcweb";
+                rooter.channelIdSelected = "106";
+                rooter.pageIndexSelected = "1";
+                rooter.pageSizeSelected = "80";
+                rooter.hudongSelected = "1";
+                rooter.supportSelected = "10000000";
+                rooter.kindSelected = rooter.newsKind[rooter.newsKindCurrentIndex - 1][1];
+                rooter.areaSelected = "";
+                rooter.sortSelected = rooter.newsSort[rooter.newsSortCurrentIndex - 1][1];
+                rooter.abroadSelected = "";
+                rooter.srcSelected = "";
+                rooter.yearSelected = "";
+                rooter.editionSelected = "";
+                rooter.chargeInfoSelected = "";
+                rooter.fitAgeSelected = "";
+                rooter.musicStyleSelected = "";
+            }
+        });
+    }
+
+    function readEntermentConfig() {
+        $.ajax({
+            type: "GET",
+            url: "/static/config/metv/enterment-config.json",
+            dataType: "json",
+            success: function (data) {
+                rooter.enterment = data["娱乐"];
+                rooter.entermentKind = rooter.enterment.kind;
+                rooter.entermentArea = rooter.enterment.area;
+                rooter.entermentYear = rooter.enterment.year;
+                rooter.entermentSort = rooter.enterment.sort;
+                rooter.entermentEdition = rooter.enterment.edition;
+                rooter.entermentChargeInfo = rooter.enterment.chargeInfo;
+                rooter.entermentFitAge = rooter.enterment.fitAge;
+                rooter.entermentMusicStyle = rooter.enterment.musicStyle;
+                rooter.entermentKindCurrentIndex = 1;
+                rooter.entermentAreaCurrentIndex = 1;
+                rooter.entermentYearCurrentIndex = 1;
+                rooter.entermentSortCurrentIndex = 1;
+                rooter.entermentEditionCurrentIndex = 1;
+                rooter.entermentChargeInfoCurrentIndex = 1;
+                rooter.entermentFitAgeCurrentIndex = 1;
+                rooter.entermentMusicStyleCurrentIndex = 1;
+
+                //重置数据
+                rooter.currentChannel = "enterment";
+                rooter.platformSelected = "pcweb";
+                rooter.channelIdSelected = "113";
+                rooter.pageIndexSelected = "1";
+                rooter.pageSizeSelected = "80";
+                rooter.hudongSelected = "1";
+                rooter.supportSelected = "10000000";
+                rooter.kindSelected = rooter.entermentKind[rooter.entermentKindCurrentIndex - 1][1];
+                rooter.areaSelected = "";
+                rooter.sortSelected = rooter.entermentSort[rooter.entermentSortCurrentIndex - 1][1];
+                rooter.abroadSelected = "";
+                rooter.srcSelected = "";
+                rooter.yearSelected = "";
+                rooter.editionSelected = "";
+                rooter.chargeInfoSelected = "";
+                rooter.fitAgeSelected = "";
+                rooter.musicStyleSelected = "";
+            }
+        });
+    }
+
+
+    function readEducationConfig() {
+        $.ajax({
+            type: "GET",
+            url: "/static/config/metv/education-config.json",
+            dataType: "json",
+            success: function (data) {
+                rooter.education = data["教育"];
+                rooter.educationKind = rooter.education.kind;
+                rooter.educationArea = rooter.education.area;
+                rooter.educationYear = rooter.education.year;
+                rooter.educationSort = rooter.education.sort;
+                rooter.educationEdition = rooter.education.edition;
+                rooter.educationChargeInfo = rooter.education.chargeInfo;
+                rooter.educationFitAge = rooter.education.fitAge;
+                rooter.educationMusicStyle = rooter.education.musicStyle;
+                rooter.educationKindCurrentIndex = 1;
+                rooter.educationAreaCurrentIndex = 1;
+                rooter.educationYearCurrentIndex = 1;
+                rooter.educationSortCurrentIndex = 1;
+                rooter.educationEditionCurrentIndex = 1;
+                rooter.educationChargeInfoCurrentIndex = 1;
+                rooter.educationFitAgeCurrentIndex = 1;
+                rooter.educationMusicStyleCurrentIndex = 1;
+
+                //重置数据
+                rooter.currentChannel = "education";
+                rooter.platformSelected = "pcweb";
+                rooter.channelIdSelected = "115";
+                rooter.pageIndexSelected = "1";
+                rooter.pageSizeSelected = "80";
+                rooter.hudongSelected = "1";
+                rooter.supportSelected = "10000000";
+                rooter.kindSelected = rooter.educationKind[rooter.educationKindCurrentIndex - 1][1];
+                rooter.areaSelected = "";
+                rooter.sortSelected = rooter.educationSort[rooter.educationSortCurrentIndex - 1][1];
+                rooter.abroadSelected = "";
+                rooter.srcSelected = "";
+                rooter.yearSelected = "";
+                rooter.editionSelected = "";
+                rooter.chargeInfoSelected = "";
+                rooter.fitAgeSelected = "";
+                rooter.musicStyleSelected = "";
+            }
+        });
+    }
+
+    function readGameConfig() {
+        $.ajax({
+            type: "GET",
+            url: "/static/config/metv/game-config.json",
+            dataType: "json",
+            success: function (data) {
+                rooter.game = data["游戏"];
+                rooter.gameKind = rooter.game.kind;
+                rooter.gameArea = rooter.game.area;
+                rooter.gameYear = rooter.game.year;
+                rooter.gameSort = rooter.game.sort;
+                rooter.gameEdition = rooter.game.edition;
+                rooter.gameChargeInfo = rooter.game.chargeInfo;
+                rooter.gameFitAge = rooter.game.fitAge;
+                rooter.gameMusicStyle = rooter.game.musicStyle;
+                rooter.gameKindCurrentIndex = 1;
+                rooter.gameAreaCurrentIndex = 1;
+                rooter.gameYearCurrentIndex = 1;
+                rooter.gameSortCurrentIndex = 1;
+                rooter.gameEditionCurrentIndex = 1;
+                rooter.gameChargeInfoCurrentIndex = 1;
+                rooter.gameFitAgeCurrentIndex = 1;
+                rooter.gameMusicStyleCurrentIndex = 1;
+
+                //重置数据
+                rooter.currentChannel = "game";
+                rooter.platformSelected = "pcweb";
+                rooter.channelIdSelected = "116";
+                rooter.pageIndexSelected = "1";
+                rooter.pageSizeSelected = "80";
+                rooter.hudongSelected = "1";
+                rooter.supportSelected = "10000000";
+                rooter.kindSelected = rooter.gameKind[rooter.gameKindCurrentIndex - 1][1];
+                rooter.areaSelected = "";
+                rooter.sortSelected = rooter.gameSort[rooter.gameSortCurrentIndex - 1][1];
+                rooter.abroadSelected = "";
+                rooter.srcSelected = "";
+                rooter.yearSelected = "";
+                rooter.editionSelected = "";
+                rooter.chargeInfoSelected = "";
+                rooter.fitAgeSelected = "";
+                rooter.musicStyleSelected = "";
+            }
+        });
+    }
+
+    function readSportConfig() {
+        $.ajax({
+            type: "GET",
+            url: "/static/config/metv/sport-config.json",
+            dataType: "json",
+            success: function (data) {
+                rooter.sport = data["体育"];
+                rooter.sportKind = rooter.sport.kind;
+                rooter.sportArea = rooter.sport.area;
+                rooter.sportYear = rooter.sport.year;
+                rooter.sportSort = rooter.sport.sort;
+                rooter.sportEdition = rooter.sport.edition;
+                rooter.sportChargeInfo = rooter.sport.chargeInfo;
+                rooter.sportFitAge = rooter.sport.fitAge;
+                rooter.sportMusicStyle = rooter.sport.musicStyle;
+                rooter.sportKindCurrentIndex = 1;
+                rooter.sportAreaCurrentIndex = 1;
+                rooter.sportYearCurrentIndex = 1;
+                rooter.sportSortCurrentIndex = 1;
+                rooter.sportEditionCurrentIndex = 1;
+                rooter.sportChargeInfoCurrentIndex = 1;
+                rooter.sportFitAgeCurrentIndex = 1;
+                rooter.sportMusicStyleCurrentIndex = 1;
+
+                //重置数据
+                rooter.currentChannel = "sport";
+                rooter.platformSelected = "pcweb";
+                rooter.channelIdSelected = "117";
+                rooter.pageIndexSelected = "1";
+                rooter.pageSizeSelected = "80";
+                rooter.hudongSelected = "1";
+                rooter.supportSelected = "10000000";
+                rooter.kindSelected = rooter.sportKind[rooter.sportKindCurrentIndex - 1][1];
+                rooter.areaSelected = "";
+                rooter.sortSelected = rooter.sportSort[rooter.sportSortCurrentIndex - 1][1];
+                rooter.abroadSelected = "";
+                rooter.srcSelected = "";
+                rooter.yearSelected = "";
+                rooter.editionSelected = "";
+                rooter.chargeInfoSelected = "";
+                rooter.fitAgeSelected = "";
+                rooter.musicStyleSelected = "";
+            }
+        });
+    }
+
+    function readOriginConfig() {
+        $.ajax({
+            type: "GET",
+            url: "/static/config/metv/origin-config.json",
+            dataType: "json",
+            success: function (data) {
+                rooter.origin = data["原创"];
+                rooter.originKind = rooter.origin.kind;
+                rooter.originArea = rooter.origin.area;
+                rooter.originYear = rooter.origin.year;
+                rooter.originSort = rooter.origin.sort;
+                rooter.originEdition = rooter.origin.edition;
+                rooter.originChargeInfo = rooter.origin.chargeInfo;
+                rooter.originFitAge = rooter.origin.fitAge;
+                rooter.originMusicStyle = rooter.origin.musicStyle;
+                rooter.originKindCurrentIndex = 1;
+                rooter.originAreaCurrentIndex = 1;
+                rooter.originYearCurrentIndex = 1;
+                rooter.originSortCurrentIndex = 1;
+                rooter.originEditionCurrentIndex = 1;
+                rooter.originChargeInfoCurrentIndex = 1;
+                rooter.originFitAgeCurrentIndex = 1;
+                rooter.originMusicStyleCurrentIndex = 1;
+
+                //重置数据
+                rooter.currentChannel = "origin";
+                rooter.platformSelected = "pcweb";
+                rooter.channelIdSelected = "111";
+                rooter.pageIndexSelected = "1";
+                rooter.pageSizeSelected = "80";
+                rooter.hudongSelected = "1";
+                rooter.supportSelected = "10000000";
+                rooter.kindSelected = rooter.originKind[rooter.originKindCurrentIndex - 1][1];
+                rooter.areaSelected = "";
+                rooter.sortSelected = rooter.originSort[rooter.originSortCurrentIndex - 1][1];
+                rooter.abroadSelected = "";
+                rooter.srcSelected = "";
+                rooter.yearSelected = "";
+                rooter.editionSelected = "";
+                rooter.chargeInfoSelected = "";
+                rooter.fitAgeSelected = "";
+                rooter.musicStyleSelected = "";
+            }
+        });
+    }
+
 });

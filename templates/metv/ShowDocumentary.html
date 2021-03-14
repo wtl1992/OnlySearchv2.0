@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{.name}}</title>
+    <meta name="keywords" content="千度,千度搜索,千度网,搜索引擎大全,高级搜索,搜索神器,搜索大全"/>
+    <meta name="description" content="千度,千度一下，你更知道,千度搜索,千度网,搜索引擎大全,高级搜索,搜索神器,搜索大全"/>
+    <link rel="shortcut icon" href="/static/images/logo/index_logo.png" type="image/icon"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/metv/showDocumentary.css"/>
+    <script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/vue.js"></script>
+    <script type="text/javascript" src="/static/js/metv/showDocumentary.js"></script>
+</head>
+<body>
+<div id="rooter">
+    <div class="list-view" v-if="tvPlayList.length > 0">
+        <h2>{{.name}}</h2>
+        <iframe></iframe>
+        <ul class="tvUl">
+            <li v-for="(tvPlayData,index) in tvPlayList[0]">
+                <p v-html="index + '：'"></p><br/>
+                <ul class="innerItem">
+                    <li v-for="(subItem,innerIndex) in tvPlayData.data.list" v-html="subItem.t3" :url="'https://www.mgtv.com' + subItem.url">
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div v-else style="text-align: center;margin-top: 50px;">
+        <img src="/static/images/loading.gif"/>
+    </div>
+</div>
+<input style="display: none;" id="url" url="{{.url}}"/>
+</body>
+</html>

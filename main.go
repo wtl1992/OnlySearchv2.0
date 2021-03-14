@@ -19,7 +19,7 @@ func main() {
 	application.HandleDir("/static", "./static")
 	application.RegisterView(iris.HTML("./templates", ".html").Reload(true))
 
-	err := application.Run(iris.TLS(":8080", "cert/1_www.ljxwtl.cn_bundle.crt", "cert/2_www.ljxwtl.cn.key"))
+	err := application.Run(iris.TLS(":8080", "cert/1_ljxwtl.cn_bundle.crt", "cert/2_ljxwtl.cn.key"))
 
 	if err != nil {
 		panic(err.Error())
