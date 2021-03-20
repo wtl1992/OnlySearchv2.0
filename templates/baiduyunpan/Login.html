@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录到本百度网盘第三方系统</title>
+    <style rel="stylesheet" type="text/css">
+        html,body{
+            margin: 0;
+            padding: 0;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        input[name="userName"]{
+            font-family: "微软雅黑", serif;
+            font-size: 20px;
+            outline: none;
+            border: 1px solid #CCCCCC;
+        }
+
+        form{
+            text-align: center;
+        }
+
+        input[type="submit"]{
+            outline: none;
+            border: 2px solid blue;
+        }
+
+        input[type="submit"]:hover{
+            cursor: pointer;
+        }
+    </style>
+    <script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<h1>登录到本百度网盘第三方系统</h1>
+<div>
+    <form action="/baiduyunpan/" method="post" enctype="multipart/form-data">
+        用户名：<input type="text" name="userName"/><br/><br/>
+        <input type="submit" value="登录系统"/>
+    </form>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("input[type='submit']").unbind().click(()=>{
+            let userName = $("input[name='userName']").val();
+            let flag = false;
+            $.ajax({
+                type: "GET",
+                url: "/baiduyunpan/verifyUserName/" + userName,
+                dataType: "json",
+                success: function (data) {
+                    if (data === 1){
+                        flag = true;
+                    }
+                }
+            });
+
+            if (flag){
+                return true;
+            }
+            else{
+                alert("用户名已经存在，请重新输入一个新的用户名！！！");
+            }
+
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

@@ -11460,7 +11460,7 @@
   // these keywords should not appear inside expressions, but operators like
   // typeof, instanceof and in are allowed
   var prohibitedKeywordRE = new RegExp('\\b' + (
-    'do,if,for,let,new,try,var,case,else,with,await,break,catch,class,const,' +
+    'do,if,for,let,new,try,var,case,else,with,await,break,catch,class,constant,' +
     'super,throw,while,yield,delete,export,import,return,switch,default,' +
     'extends,finally,continue,debugger,function,arguments'
   ).split(',').join('\\b|\\b') + '\\b');

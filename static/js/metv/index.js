@@ -1443,4 +1443,14 @@ $(function () {
         });
     }
 
+
+    $("input").unbind().keyup(function (event) {
+        if (event.keyCode === 13 && $(this).val() !== ""){
+            $("a.searchButton").get(0).click();
+        }
+    });
+
+    $("a.searchButton").unbind().click(function () {
+        $(this).attr("href","/metv/searchResultPage/"+$("input").val());
+    });
 });

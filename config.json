@@ -8,7 +8,7 @@
     "port": 3306,
     "user_name": "root",
     "password": "wtl199201180271",
-    "data_base": "order"
+    "data_base": "bigdata"
   },
   "redis": {
     "net_work": "tcp",

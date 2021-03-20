@@ -3,6 +3,7 @@ package main
 import (
 	"OnlySearchv2.0/config"
 	"OnlySearchv2.0/database"
+	"OnlySearchv2.0/service"
 	"github.com/kataras/iris/v12"
 )
 
@@ -12,9 +13,11 @@ func main() {
 	config.GlobalConfig(application)
 
 	dataBase, _ := config.DatabaseConfig()
-	config.MetvConfig(application, dataBase.(*database.MySqlDataBase).Engine, nil)
-	config.PlayConfig(application, dataBase.(*database.MySqlDataBase).Engine, nil)
-	config.TvConfig(application, dataBase.(*database.MySqlDataBase).Engine, nil)
+
+	//全局初始化
+	config.AllControllerConfig(application, dataBase.(*database.MySqlDataBase).Engine, nil)
+
+	service.ScheduleAll(application, dataBase.(*database.MySqlDataBase).Engine, nil)
 
 	application.HandleDir("/static", "./static")
 	application.RegisterView(iris.HTML("./templates", ".html").Reload(true))

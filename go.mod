@@ -50,5 +50,5 @@ require (
 	gopkg.in/ini.v1 v1.62.0 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 	xorm.io/builder v0.3.9 // indirect
-	xorm.io/core v0.7.3 // indirect
+	xorm.io/core v0.7.3
 )

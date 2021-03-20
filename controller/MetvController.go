@@ -1,7 +1,7 @@
 package controller
 
 import (
-	_const "OnlySearchv2.0/const"
+	_const "OnlySearchv2.0/constant"
 	"OnlySearchv2.0/model/metv"
 	"encoding/json"
 	_ "github.com/PuerkitoBio/goquery"
@@ -42,6 +42,10 @@ func (mc *MetvController) BeforeActivation(beforeActivation mvc.BeforeActivation
 	beforeActivation.Handle("GET", "getDocumentaryList/{vid:string}/{cid:string}", "GetDocumentaryList")
 	//展示Documentary（纪录片）
 	beforeActivation.Handle("GET", "showDocumentary", "ShowDocumentary")
+	//查询出所有匹配的关键词的结果集
+	beforeActivation.Handle("GET", "queryByKeyword/{keyword:string}", "QueryByKeyword")
+	//查询出所有匹配的关键词的结果集界面
+	beforeActivation.Handle("GET", "searchResultPage/{keyword:string}", "SearchResultPage")
 }
 
 func (mc *MetvController) Index() mvc.Result {
@@ -231,6 +235,26 @@ func (mc *MetvController) ShowDocumentary() mvc.Result {
 			"url":  url,
 			"name": name,
 		},
+	}
+}
+
+func (mc *MetvController) QueryByKeyword(keyword string) mvc.Result {
+	var metvs = make([]metv.Metv, 0)
+	err := mc.Engine.Where("title like concat('%',?,'%') or starts like concat('%',?,'%') or story like concat('%',?,'%')", keyword, keyword, keyword).Find(&metvs)
+
+	if err != nil {
+		panic(err)
+	}
+
+	return mvc.Response{
+		Object: metvs,
+	}
+}
+
+func (mc *MetvController) SearchResultPage(keyword string) mvc.Result {
+	return mvc.View{
+		Name: "metv/searchPage.html",
+		Data: keyword,
 	}
 }
 

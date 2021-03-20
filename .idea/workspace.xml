@@ -2,30 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71a621b3-c72c-4a21-9d66-7bbb66443b6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cert/2_ljxwtl.cn.key" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/metv/MetvPcWeb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/MetvScheduler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/config/metv/documentary-config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/config/metv/education-config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/config/metv/enterment-config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/config/metv/game-config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/config/metv/happyLife-config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/config/metv/news-config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/config/metv/origin-config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/config/metv/sport-config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/metv/showDocumentary.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/metv/showDocumentary.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/metv/ShowDocumentary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constant/Const.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/BaiDuYunPanController.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/BaiduYunPanRedirectController.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/baiduyunpan/AccessTokenUsers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/metv/MetvTable.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/SchedulerAll.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/schedule/MetvScheduler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/metv/searchPage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/htmls/baiduyunpan/redirectAccessTokenCollectPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/metv/searchPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/baiduyunpan/Login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/metv/searchPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/1_www.ljxwtl.cn_bundle.crt" beforeDir="false" afterPath="$PROJECT_DIR$/cert/1_ljxwtl.cn_bundle.crt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/2_www.ljxwtl.cn.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/DataBaseConfig.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/DataBaseConfig.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/MetvRegisterConfig.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/AllRegisterConfig.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/const/Const.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/MetvController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/MetvController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/MySqlDataBase.go" beforeDir="false" afterPath="$PROJECT_DIR$/database/MySqlDataBase.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/metv/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/metv/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/MetvScheduler.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/metv/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/metv/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/metv/MetvIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/metv/MetvIndex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/vue.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,9 +38,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="HTML File" />
         <option value="Go File" />
       </list>
     </option>
@@ -62,25 +64,28 @@
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/config/metv" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/htmls" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
+  <component name="ReadonlyStatusHandler">
+    <option name="SHOW_DIALOG" value="false" />
+  </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GoProjects\OnlySearchv2.0\static\config\metv" />
-      <recent name="D:\GoProjects\OnlySearchv2.0\cert" />
-      <recent name="D:\GoProjects\OnlySearchv2.0\static\images" />
-      <recent name="D:\GoProjects\OnlySearchv2.0\static\js\tv" />
-      <recent name="D:\GoProjects\OnlySearchv2.0\static\css\tv" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GoProjects\OnlySearchv2.0\service\schedule" />
       <recent name="D:\GoProjects\OnlySearchv2.0\cert" />
       <recent name="D:\GoProjects\OnlySearchv2.0\model\metv" />
       <recent name="D:\GoProjects\OnlySearchv2.0\templates\tv" />
       <recent name="D:\GoProjects\OnlySearchv2.0\templates\metv" />
-      <recent name="D:\GoProjects\OnlySearchv2.0\static\config\metv" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GoProjects\OnlySearchv2.0\static\htmls" />
+      <recent name="D:\GoProjects\OnlySearchv2.0\static\css\metv" />
+      <recent name="D:\GoProjects\OnlySearchv2.0\static\js\metv" />
+      <recent name="D:\GoProjects\OnlySearchv2.0\templates\metv" />
+      <recent name="D:\GoProjects\OnlySearchv2.0" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -96,6 +101,15 @@
     </option>
   </component>
   <component name="RunManager" selected="Go Build.go build main.go">
+    <configuration name="go build MetvScheduler.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="OnlySearchv2.0" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/service/MetvScheduler.go" />
+      <package value="OnlySearchv2.0" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build OnlySearchv2.0" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="OnlySearchv2.0" />
       <working_directory value="$PROJECT_DIR$" />
@@ -114,6 +128,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Build.go build MetvScheduler.go" />
         <item itemvalue="Go Build.go build OnlySearchv2.0" />
       </list>
     </recent_temporary>
@@ -138,7 +153,8 @@
     <MESSAGE value="上传增强版" />
     <MESSAGE value="增加https" />
     <MESSAGE value="新功能动漫模块添加" />
-    <option name="LAST_COMMIT_MESSAGE" value="新功能动漫模块添加" />
+    <MESSAGE value="芒果tv各模块完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="芒果tv各模块完成" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
