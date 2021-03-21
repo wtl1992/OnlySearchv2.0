@@ -15,6 +15,7 @@ require (
 	github.com/go-xorm/xorm v0.7.9
 	github.com/gobwas/httphead v0.1.0 // indirect
 	github.com/google/go-querystring v1.0.0 // indirect
+	github.com/gorilla/securecookie v1.1.1
 	github.com/imkira/go-interpol v1.1.0 // indirect
 	github.com/iris-contrib/jade v1.1.4 // indirect
 	github.com/iris-contrib/schema v0.0.6 // indirect

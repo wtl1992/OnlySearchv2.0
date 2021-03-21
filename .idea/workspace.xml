@@ -2,32 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71a621b3-c72c-4a21-9d66-7bbb66443b6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/constant/Const.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/BaiDuYunPanController.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/BaiduYunPanRedirectController.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/baiduyunpan/AccessTokenUsers.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/metv/MetvTable.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/SchedulerAll.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/schedule/MetvScheduler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/metv/searchPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/htmls/baiduyunpan/redirectAccessTokenCollectPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/metv/searchPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/baiduyunpan/Login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/metv/searchPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/baiduyunpan/DirParam.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/DataBaseConfig.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/DataBaseConfig.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/MetvRegisterConfig.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/AllRegisterConfig.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/const/Const.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/MetvController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/MetvController.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/MySqlDataBase.go" beforeDir="false" afterPath="$PROJECT_DIR$/database/MySqlDataBase.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/AllRegisterConfig.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/AllRegisterConfig.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/BaiDuYunPanController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/BaiDuYunPanController.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/MetvScheduler.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/metv/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/metv/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/htmls/baiduyunpan/redirectAccessTokenCollectPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/htmls/baiduyunpan/redirectAccessTokenCollectPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/baiduyunpan/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/baiduyunpan/Login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +137,8 @@
     <MESSAGE value="增加https" />
     <MESSAGE value="新功能动漫模块添加" />
     <MESSAGE value="芒果tv各模块完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="芒果tv各模块完成" />
+    <MESSAGE value="百度网盘的第三方开发的初始工作完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="百度网盘的第三方开发的初始工作完成" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

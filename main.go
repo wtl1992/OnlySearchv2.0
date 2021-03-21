@@ -11,7 +11,6 @@ func main() {
 	application := iris.New()
 
 	config.GlobalConfig(application)
-
 	dataBase, _ := config.DatabaseConfig()
 
 	//全局初始化
